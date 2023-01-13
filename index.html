@@ -61,6 +61,58 @@
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
           <button type="button" class="close-btn" data-modal-close>x</button>
+          <span class="modal-text">Zostaw swoje dane w formularzu poniżej</span>
+          <form class="modal-form" method="post" id="id-application">
+            <label class="form-text" for="id-name">Imie</label>
+            <div class="form-svg-container">
+              <input class="form-input" type="text" name="name" id="id-name" />
+              <svg width="18" height="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+            <label class="form-text" for="id-phone-number">Telefon</label>
+            <div class="form-svg-container">
+              <input
+                class="form-input"
+                type="tel"
+                name="phone"
+                id="id-phone-number"
+              />
+              <svg width="18" height="18">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+            </div>
+            <label class="form-text" for="id-email">Email</label>
+            <div class="form-svg-container">
+              <input
+                class="form-input"
+                type="email"
+                name="email"
+                id="id-email"
+              />
+              <svg width="18" height="18">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+            </div>
+            <label class="form-text" for="id-comment">Komentarz</label>
+            <textarea
+              class="form-input form-comment"
+              id="id-comment"
+              name="comment"
+              placeholder="Wprowadź tekst"
+            ></textarea>
+            <div class="flex-checkbox">
+              <input class="agreement-checkbox" type="checkbox" name="policies" id="agreement" />
+              <svg class="custom-checkbox" height="15" width="16">
+                <use href="./images//icons.svg#icon-tick"></use>
+              </svg>
+              <label class="agreement-text" for="agreement"
+                >Oświadczam iż akceptuję <a href="#">Regulamin</a> i
+                <a href="#">Politykę Prywatności.</a>
+              </label>
+            </div>
+          </form>
+          <button type="submit" form="id-application">Wyślij</button>
         </div>
       </div>
       <section class="white-background section">
@@ -440,6 +492,26 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="newsletter">
+          <form method="post" id="id-newsletter">
+            <label class="newsletter-flex">
+              <span class="join-text">Zapisz się do newslettera</span>
+              <input
+                class="newsletter-email"
+                type="email"
+                name="newsletter-email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+          </form>
+          <button type="submit" form="id-newsletter">
+            Zapisz się
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-icon-send"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </footer>

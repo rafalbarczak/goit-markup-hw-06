@@ -93,7 +93,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
-  transition: var(--animation-time);
+  transition: color var(--animation-time);
 }
 .nav-list .is-active {
   position: relative;
@@ -186,9 +186,127 @@ body {
   height: 581px;
   position: relative;
   transition: transform var(--animation-time);
+  text-align: center;
+  padding-top: 40px;
 }
 .backdrop.is-hidden .modal {
   transform: scale(0);
+}
+.modal-text {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.form-text {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+.form-input {
+  width: 448px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+  padding: 0 16px 0 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--animation-time);
+}
+.form-input:focus,
+.form-input:hover,
+.newsletter-email:focus,
+.newsletter-email:hover {
+  outline: none;
+  border-color: var(--interaction-color);
+}
+.form-svg-container:focus-within svg,
+.form-svg-container:hover svg {
+  fill: #2196f3;
+}
+.form-svg-container {
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+.form-svg-container svg {
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  transition: fill var(--animation-time);
+}
+.form-comment {
+  resize: none;
+  height: 120px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  padding-top: 12px;
+}
+.form-comment::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.agreement-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.agreement-text a {
+  color: var(--interaction-color);
+}
+.flex-checkbox {
+  display: flex;
+  gap: 8px;
+  margin-left: 15px;
+  position: relative;
+  align-items: center;
+}
+.flex-checkbox input {
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  z-index: 2;
+  transition: opacity var(--animation-time);
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+.custom-checkbox {
+  position: absolute;
+  left: 0;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity var(--animation-time);
+  background-color: var(--interaction-color);
+}
+.agreement-checkbox:checked + .custom-checkbox {
+  opacity: 1;
+}
+.agreement-checkbox:checked {
+  opacity: 0;
+}
+.modal button[type="submit"] {
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  background-color: var(--interaction-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 .close-btn {
   width: 30px;
@@ -403,7 +521,7 @@ body {
   top: 0;
   bottom: 0;
   transform: translateY(100%);
-  transition: translate, var(--animation-time);
+  transition: translateY, var(--animation-time);
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
@@ -536,4 +654,41 @@ body {
   border-radius: 50%;
   justify-content: center;
   transition: background-color var(--animation-time);
+}
+.newsletter {
+  padding-top: 72px;
+  display: inline-flex;
+}
+.newsletter button {
+  width: 200px;
+  height: 50px;
+  background-color: var(--interaction-color);
+  border-radius: 4px;
+  border: none;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 28px;
+  padding-left: 42px;
+  margin-left: 15px;
+  margin-top: 36px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.newsletter-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.newsletter-email {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  width: 358px;
+  height: 50px;
+  line-height: 1.2;
+  padding-left: 19px;
+  transition: border-color var(--animation-time);
 }
