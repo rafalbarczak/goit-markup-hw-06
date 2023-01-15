@@ -697,4 +697,5 @@ body {
   line-height: 1.2;
   padding-left: 19px;
   transition: border-color var(--animation-time);
+  color: rgba(255, 255, 255, 0.6);
 }
